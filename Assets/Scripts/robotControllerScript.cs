@@ -10,6 +10,7 @@ public class robotControllerScript : MonoBehaviour {
 	private float move;
 	private Animator animator;
 	private bool grounded = false;
+	private bool inTub = false;
 	public Transform groundCheck;
 	private float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
@@ -17,48 +18,57 @@ public class robotControllerScript : MonoBehaviour {
 	private bool onSoap = false;
 	public Transform soapCheck;
 	public LayerMask whatIsSoap;
+	public LayerMask whatIsTub;
 	private GameObject collisionObject;
+	private int bubbleCount;
+	private spawnBubble bubbles;
+//	private float leftBorder = -7.69f;
+//	private float rightBorder = 7.71f;
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 		//collisionObject = this.gameObject;
 		transform.parent = null;
+//		bubbleCount = 0;
 		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
-		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+		if (!inTub) {
+			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+			inTub = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsTub);
+			animator.SetBool ("Ground", grounded);
+			animator.SetFloat ("vSpeed", rigidBody.velocity.y);
+			animator.SetBool ("InTub", inTub);
 
-		animator.SetBool ("Ground", grounded);
-		animator.SetFloat ("vSpeed", rigidBody.velocity.y);
+			move = Input.GetAxis ("Horizontal");
+			animator.SetFloat ("speed", Mathf.Abs (move));
+			rigidBody.velocity = new Vector2 (move * maxSpeed, rigidBody.velocity.y);
+			if (move > 0 && !facingRight)
+				Flip ();
+			else if (move < 0 && facingRight)
+				Flip ();
 
-		move = Input.GetAxis("Horizontal");
-		animator.SetFloat ("speed", Mathf.Abs (move));
-		rigidBody.velocity = new Vector2 (move * maxSpeed, rigidBody.velocity.y);
-		if (move > 0 && !facingRight)
-			Flip ();
-		else if (move < 0 && facingRight)
-			Flip ();
+		}
 	}
 
 	void Update(){
-		onSoap = Physics2D.OverlapCircle(soapCheck.position, groundRadius, whatIsSoap);
-		if (onSoap) {
-			transform.parent = collisionObject.transform;
-		} else {
-			transform.parent = null;
-		}
-		if (grounded && (Input.GetKeyDown (KeyCode.Space) || Input.GetButtonDown("Fire1"))) {
-			Debug.Log ("JUMP!");
-			animator.SetBool ("Ground", false);
-			rigidBody.AddForce(new Vector2(0,jumpForce));
-		}
-		//Debug.Log ("grounded: " + grounded.ToString () + " onSoap: " + onSoap.ToString ());
-		if (transform.parent != null){
-			Debug.Log("parent: " + transform.parent.ToString());
+		if (!inTub) {
+			onSoap = Physics2D.OverlapCircle (soapCheck.position, groundRadius, whatIsSoap);
+			if (onSoap) {
+				transform.parent = collisionObject.transform;
+			} else {
+				transform.parent = null;
+			}
+			if (grounded && (Input.GetKeyDown (KeyCode.Space) || Input.GetButtonDown ("Fire1"))) {
+				animator.SetBool ("Ground", false);
+				rigidBody.AddForce (new Vector2 (0, jumpForce));
+			}
+			//Debug.Log ("grounded: " + grounded.ToString () + " onSoap: " + onSoap.ToString ());
+			if (transform.parent != null) {
+			}
 		}
 	}
 
@@ -73,5 +83,19 @@ public class robotControllerScript : MonoBehaviour {
 		if (other.gameObject.tag == "soap") { 
 			collisionObject = other.gameObject;
 		}
+		if (other.gameObject.CompareTag ("bubble")) {
+			bubbleCount++;
+			other.gameObject.SetActive (false);
+			//Destroy (other.gameObject);
+			Debug.Log ("Bubble Score: " + bubbleCount.ToString());
+		}
 	}
+
+//	void OnTriggerEnter2D(Collider2D other) {  //2d collider that has been touched
+//		if (other.gameObject.CompareTag ("bubble")) {
+//			other.gameObject.SetActive (false);  // if pickup collision, deactivate pickup
+//			bubbleCount++;
+//			//SetCountText ();
+//		}
+//	}
 }
