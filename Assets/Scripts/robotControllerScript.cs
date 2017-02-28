@@ -56,18 +56,23 @@ public class robotControllerScript : MonoBehaviour {
 
 	void Update(){
 		if (!inTub) {
-			onSoap = Physics2D.OverlapCircle (soapCheck.position, groundRadius, whatIsSoap);
-			if (onSoap) {
-				transform.parent = collisionObject.transform;
-			} else {
-				transform.parent = null;
-			}
 			if (grounded && (Input.GetKeyDown (KeyCode.Space) || Input.GetButtonDown ("Fire1"))) {
 				animator.SetBool ("Ground", false);
 				rigidBody.AddForce (new Vector2 (0, jumpForce));
 			}
 			//Debug.Log ("grounded: " + grounded.ToString () + " onSoap: " + onSoap.ToString ());
 			if (transform.parent != null) {
+			}
+		}
+	}
+
+	void LateUpdate(){
+		if (!inTub) {
+			onSoap = Physics2D.OverlapCircle (soapCheck.position, groundRadius, whatIsSoap);
+			if (onSoap) {
+				transform.parent = collisionObject.transform;
+			} else {
+				transform.parent = null;
 			}
 		}
 	}
