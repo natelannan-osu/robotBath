@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class robotControllerScript : MonoBehaviour {
 
 	public float maxSpeed = 10f;
+	public Text saved;
+	public Text livesLeft;
 	private bool facingRight = true;
 	private Rigidbody2D rigidBody;
 	private float move;
@@ -20,8 +24,17 @@ public class robotControllerScript : MonoBehaviour {
 	public LayerMask whatIsSoap;
 	public LayerMask whatIsTub;
 	private GameObject collisionObject;
-	private int bubbleCount;
+	[HideInInspector]
+	public static int bubbleCount =0;
 	private spawnBubble bubbles;
+	[HideInInspector]
+	public static int lives = 3;
+	private GameObject[] soapArr;
+	private GameObject[] bubbleArr;
+	private spawnBubble stopSpawn;
+
+	private float deathTime = 2.0f;
+//	private AnimationClip deathClip;
 //	private float leftBorder = -7.69f;
 //	private float rightBorder = 7.71f;
 	// Use this for initialization
@@ -30,7 +43,6 @@ public class robotControllerScript : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		//collisionObject = this.gameObject;
 		transform.parent = null;
-//		bubbleCount = 0;
 		
 	}
 	
@@ -39,6 +51,21 @@ public class robotControllerScript : MonoBehaviour {
 		if (!inTub) {
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 			inTub = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsTub);
+			if (inTub) {
+				lives--;
+				deathTime = deathTime + Time.time;
+				soapArr = GameObject.FindGameObjectsWithTag ("soap");
+				bubbleArr = GameObject.FindGameObjectsWithTag ("bubble");
+				for (int i = 0; i < soapArr.Length; i++) {
+					stopSpawn = soapArr [i].gameObject.GetComponent<spawnBubble> ();
+					stopSpawn.enabled = false;
+				}
+				for (int i =0; i < bubbleArr.Length; i++) {
+					Destroy (bubbleArr [i].gameObject);
+				}
+
+
+			}
 			animator.SetBool ("Ground", grounded);
 			animator.SetFloat ("vSpeed", rigidBody.velocity.y);
 			animator.SetBool ("InTub", inTub);
@@ -64,6 +91,18 @@ public class robotControllerScript : MonoBehaviour {
 			if (transform.parent != null) {
 			}
 		}
+		livesLeft.text = "Lives: " + lives.ToString ();
+		saved.text = "Saved: " + bubbleCount.ToString ();
+		if (lives == 0 && SceneManager.GetActiveScene().name != "GameOver") {
+			//bubbleCount = 0;
+			//lives = 3;
+			//popBubble.poppedCount = 0;
+			SceneManager.LoadScene (2);
+		}
+		else if (inTub && Time.time > deathTime) {
+			SceneManager.LoadScene (1);
+		}
+
 	}
 
 	void LateUpdate(){
@@ -91,11 +130,12 @@ public class robotControllerScript : MonoBehaviour {
 		if (other.gameObject.CompareTag ("bubble")) {
 			bubbleCount++;
 			other.gameObject.SetActive (false);
+
 			//Destroy (other.gameObject);
-			Debug.Log ("Bubble Score: " + bubbleCount.ToString());
+			//Debug.Log ("Bubble Score: " + bubbleCount.ToString());
 		}
 	}
-
+		
 //	void OnTriggerEnter2D(Collider2D other) {  //2d collider that has been touched
 //		if (other.gameObject.CompareTag ("bubble")) {
 //			other.gameObject.SetActive (false);  // if pickup collision, deactivate pickup
