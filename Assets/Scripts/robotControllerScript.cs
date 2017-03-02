@@ -32,6 +32,8 @@ public class robotControllerScript : MonoBehaviour {
 	private GameObject[] soapArr;
 	private GameObject[] bubbleArr;
 	private spawnBubble stopSpawn;
+	public AudioClip electricity;
+	private AudioSource audioSource;
 
 	private float deathTime = 2.0f;
 //	private AnimationClip deathClip;
@@ -41,6 +43,8 @@ public class robotControllerScript : MonoBehaviour {
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+		audioSource = GetComponent<AudioSource> ();
+		//electricity = GetComponent<AudioClip> ();
 		//collisionObject = this.gameObject;
 		transform.parent = null;
 		
@@ -53,6 +57,7 @@ public class robotControllerScript : MonoBehaviour {
 			inTub = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsTub);
 			if (inTub) {
 				lives--;
+				audioSource.PlayOneShot(electricity);
 				deathTime = deathTime + Time.time;
 				soapArr = GameObject.FindGameObjectsWithTag ("soap");
 				bubbleArr = GameObject.FindGameObjectsWithTag ("bubble");
@@ -93,7 +98,7 @@ public class robotControllerScript : MonoBehaviour {
 		}
 		livesLeft.text = "Lives: " + lives.ToString ();
 		saved.text = "Saved: " + bubbleCount.ToString ();
-		if (lives == 0 && SceneManager.GetActiveScene().name != "GameOver") {
+		if (lives == 0 && SceneManager.GetActiveScene().name != "GameOver" && Time.time > deathTime) {
 			//bubbleCount = 0;
 			//lives = 3;
 			//popBubble.poppedCount = 0;

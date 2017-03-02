@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawnBubble : MonoBehaviour {
 
-	public float timeToSpawn = 2.0f;
+	public float timeToSpawn = 5.0f;
 	public GameObject bubbleObject;
 	public Sprite bubbleSprite;
 //	public int maxBubbles = 3;
@@ -16,16 +16,46 @@ public class spawnBubble : MonoBehaviour {
 	static private bool reset = false;
 	private bool localReset = true;
 	static private int allReset = 0;
+	private float range = 2.0f;
+	[HideInInspector]
+	public float bubbleSpeed = -0.01f;
+	private float timeOffset = 0f;
 	// Use this for initialization
 	void Start () {
 		additionalWait = Random.Range (0.0f, 3.0f);
 		countdown = additionalWait;
+		if (popBubble.poppedCount == 0 && robotControllerScript.lives == 3) {
+			timeOffset = Time.time;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+//		if (Time.time > 120){
+//			timeToSpawn = 1.0f;
+//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
+//		} else if (Time.time > 90) {
+//			timeToSpawn = 2.0f;
+//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
+//		} else if (Time.time > 60) {
+//			timeToSpawn = 3.0f;
+//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
+//		} else if (Time.time > 30) {
+//			timeToSpawn = 4.0f;
+//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
+//		}
+
+		if (timeToSpawn > 0f) {
+			timeToSpawn = 5.0f - (Time.time-timeOffset) / 30;
+		}
+		bubbleSpeed = -.01f - (Time.time-timeOffset) / 3000;
+		//Debug.Log ("spawn Time: " + timeToSpawn.ToString () + "speed: " + bubbleSpeed.ToString());
+			
+//		Debug.Log (Time.timeSinceLevelLoad.ToString ());
+
+			
 		if (reset && localReset) {
-			additionalWait = Random.Range (0.0f, 2.0f);
+			additionalWait = Random.Range (0.0f, range);
 			countdown = timeToSpawn + additionalWait;
 			localReset = false;
 			allReset++;	
@@ -38,13 +68,11 @@ public class spawnBubble : MonoBehaviour {
 		}
 
 		if (countdown <= 0 /*&& bubbleCount < maxBubbles*/) {
-			makeBubble ();
+			if (transform.childCount == 0) {
+				makeBubble ();
+			}
 			additionalWait = Random.Range (0.0f, 2.0f);
 			countdown = timeToSpawn + additionalWait;
-			reset = true;
-			localReset = false;
-			allReset++;	
-			inflating = true;
 		} else {
 			countdown -= Time.deltaTime;
 		}
@@ -66,6 +94,10 @@ public class spawnBubble : MonoBehaviour {
 		bubble.transform.localPosition = new Vector3 (0f, 0f, 0f);
 		//bubbleCount++;
 		//bubble.transform.parent = null;
+		reset = true;
+		localReset = false;
+		allReset++;	
+		inflating = true;
 	}
 
 	void inflate () {
@@ -73,6 +105,7 @@ public class spawnBubble : MonoBehaviour {
 		if (bubble.transform.localScale.x > 1f) {
 			inflating = false;
 			bubble.transform.parent = null;
+			bubble.GetComponent<Rigidbody2D> ().gravityScale  = bubbleSpeed;
 		}
 	}
 }
