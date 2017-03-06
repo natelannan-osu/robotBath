@@ -13,6 +13,7 @@ public class robotControllerScript : MonoBehaviour {
 	private Rigidbody2D rigidBody;
 	private float move;
 	private Animator animator;
+	public Animator childAnimator;
 	private bool grounded = false;
 	private bool inTub = false;
 	public Transform groundCheck;
@@ -43,6 +44,7 @@ public class robotControllerScript : MonoBehaviour {
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+		//childAnimator = GetComponentInChildren <Animator> ();
 		audioSource = GetComponent<AudioSource> ();
 		//electricity = GetComponent<AudioClip> ();
 		//collisionObject = this.gameObject;
@@ -74,6 +76,7 @@ public class robotControllerScript : MonoBehaviour {
 			animator.SetBool ("Ground", grounded);
 			animator.SetFloat ("vSpeed", rigidBody.velocity.y);
 			animator.SetBool ("InTub", inTub);
+			childAnimator.SetBool ("InTub", inTub);
 
 			move = Input.GetAxis ("Horizontal");
 			animator.SetFloat ("speed", Mathf.Abs (move));
@@ -114,7 +117,9 @@ public class robotControllerScript : MonoBehaviour {
 		if (!inTub) {
 			onSoap = Physics2D.OverlapCircle (soapCheck.position, groundRadius, whatIsSoap);
 			if (onSoap) {
-				transform.parent = collisionObject.transform;
+				if (collisionObject != null) {
+					transform.parent = collisionObject.transform;
+				}
 			} else {
 				transform.parent = null;
 			}
@@ -135,17 +140,7 @@ public class robotControllerScript : MonoBehaviour {
 		if (other.gameObject.CompareTag ("bubble")) {
 			bubbleCount++;
 			other.gameObject.SetActive (false);
-
-			//Destroy (other.gameObject);
-			//Debug.Log ("Bubble Score: " + bubbleCount.ToString());
 		}
 	}
 		
-//	void OnTriggerEnter2D(Collider2D other) {  //2d collider that has been touched
-//		if (other.gameObject.CompareTag ("bubble")) {
-//			other.gameObject.SetActive (false);  // if pickup collision, deactivate pickup
-//			bubbleCount++;
-//			//SetCountText ();
-//		}
-//	}
 }

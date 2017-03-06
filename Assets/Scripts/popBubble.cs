@@ -8,13 +8,15 @@ public class popBubble : MonoBehaviour {
 
 	public Text popped;
 	private static float popTime = 0.2f;
+	private Vector3 prevPos;
+	private Rigidbody2D rigidbody;
 
 	[HideInInspector]
 	static public int poppedCount = 0;
 
 	// Use this for initialization
 	void Start () {
-
+		rigidbody = gameObject.GetComponent<Rigidbody2D> ();
 		
 	}
 	
@@ -22,18 +24,27 @@ public class popBubble : MonoBehaviour {
 	void Update () {
 		popped.text = "Popped: " + poppedCount.ToString ();
 		if (poppedCount >= 10 && SceneManager.GetActiveScene().name != "GameOver" && Time.time > popTime) {
-			//poppedCount = 0;
-			//robotControllerScript.lives = 3;
 			SceneManager.LoadScene (2);
 		}
 	}
+
+	void FixedUpdate () {
+		CheckBubble ();
+	}
+
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "fans") { 
 			popTime = Time.time + 0.2f;
-			Debug.Log("time: " + Time.time.ToString() + "popTime: " + popTime.ToString());
 			Destroy (this.gameObject);
 			poppedCount++;
-
+		}
+	}
+	void CheckBubble(){
+		if (transform.parent == null && rigidbody.gravityScale != 0f) {  //should be floating
+			if (prevPos == transform.position) {
+				rigidbody.AddForce (new Vector2 (0f, .0001f)); //give it a little nudge
+			}
+			prevPos = transform.position; 
 		}
 	}
 }

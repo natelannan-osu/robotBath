@@ -20,38 +20,23 @@ public class spawnBubble : MonoBehaviour {
 	[HideInInspector]
 	public float bubbleSpeed = -0.01f;
 	private float timeOffset = 0f;
+	private Rigidbody2D bubbleRB;
 	// Use this for initialization
 	void Start () {
 		additionalWait = Random.Range (0.0f, 3.0f);
 		countdown = additionalWait;
-		if (popBubble.poppedCount == 0 && robotControllerScript.lives == 3) {
+//		if (popBubble.poppedCount == 0 && robotControllerScript.lives == 3) {
 			timeOffset = Time.time;
-		}
+//		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		if (Time.time > 120){
-//			timeToSpawn = 1.0f;
-//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
-//		} else if (Time.time > 90) {
-//			timeToSpawn = 2.0f;
-//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
-//		} else if (Time.time > 60) {
-//			timeToSpawn = 3.0f;
-//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
-//		} else if (Time.time > 30) {
-//			timeToSpawn = 4.0f;
-//			Debug.Log ("range: " + range.ToString() + "spawn time: " + timeToSpawn.ToString ()); 
-//		}
 
 		if (timeToSpawn > 0f) {
 			timeToSpawn = 5.0f - (Time.time-timeOffset) / 30;
 		}
 		bubbleSpeed = -.01f - (Time.time-timeOffset) / 3000;
-		//Debug.Log ("spawn Time: " + timeToSpawn.ToString () + "speed: " + bubbleSpeed.ToString());
-			
-//		Debug.Log (Time.timeSinceLevelLoad.ToString ());
 
 			
 		if (reset && localReset) {
@@ -90,8 +75,8 @@ public class spawnBubble : MonoBehaviour {
 		bubble.transform.parent = transform;
 		// Set the sort layer.
 		bubble.GetComponent<SpriteRenderer> ().sortingLayerName = "bubbles";
-		// Set the transform values of the cannonball.
-		bubble.transform.localPosition = new Vector3 (0f, 0f, 0f);
+		// Set the transform values of the bubble.
+		bubble.transform.localPosition = new Vector3 (0f, .05f, 0f);
 		//bubbleCount++;
 		//bubble.transform.parent = null;
 		reset = true;
@@ -101,11 +86,12 @@ public class spawnBubble : MonoBehaviour {
 	}
 
 	void inflate () {
+		bubbleRB = bubble.GetComponent<Rigidbody2D> ();
 		bubble.transform.localScale += new Vector3(.01f, .01f, 0);
 		if (bubble.transform.localScale.x > 1f) {
+			bubbleRB.gravityScale  = bubbleSpeed;
 			inflating = false;
 			bubble.transform.parent = null;
-			bubble.GetComponent<Rigidbody2D> ().gravityScale  = bubbleSpeed;
 		}
 	}
 }
