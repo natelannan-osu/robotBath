@@ -1,89 +1,246 @@
 fileFormatVersion: 2
 guid: ecbcc94281989c6478699b7dfbb79616
-timeCreated: 1487994453
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: RobotBoyIdle00
-    21300002: RobotBoyIdle01
-    21300004: RobotBoyIdle02
-    21300006: RobotBoyIdle03
-    21300008: RobotBoyIdle04
-    21300010: RobotBoyIdle05
-    21300012: RobotBoyIdle06
-    21300014: RobotBoyIdle07
-    21300016: RobotBoyIdle08
-    21300018: RobotBoyIdle09
-    21300020: RobotBoyIdle10
-    21300022: RobotBoyIdle11
-    21300024: RobotBoyIdle12
-    21300026: RobotBoyIdle13
-    21300028: RobotBoyIdle14
-    21300030: RobotBoyIdle15
-    21300032: RobotBoyIdle16
-    21300034: RobotBoyIdle17
-    21300036: RobotBoyIdle18
-    21300038: RobotBoyIdle19
-    21300040: RobotBoyIdle20
-    21300042: RobotBoyIdle21
-    21300044: RobotBoyIdle22
-    21300046: RobotBoyIdle23
-    21300048: RobotBoyIdle24
-    21300050: RobotBoyIdle25
-    21300052: RobotBoyIdle26
-    21300054: RobotBoyIdle27
-    21300056: RobotBoyIdle28
-    21300058: RobotBoyIdle29
-    21300060: RobotBoyIdleSprite_0
-    21300062: RobotBoyIdleSprite_1
-    21300064: RobotBoyIdleSprite_2
-    21300066: RobotBoyIdleSprite_3
-    21300068: RobotBoyIdleSprite_4
-    21300070: RobotBoyIdleSprite_5
-    21300072: RobotBoyIdleSprite_6
-    21300074: RobotBoyIdleSprite_7
-    21300076: RobotBoyIdleSprite_8
-    21300078: RobotBoyIdleSprite_9
-    21300080: RobotBoyIdleSprite_10
-    21300082: RobotBoyIdleSprite_11
-    21300084: RobotBoyIdleSprite_12
-    21300086: RobotBoyIdleSprite_13
-    21300088: RobotBoyIdleSprite_14
-    21300090: RobotBoyIdleSprite_15
-    21300092: RobotBoyIdleSprite_16
-    21300094: RobotBoyIdleSprite_17
-    21300096: RobotBoyIdleSprite_18
-    21300098: RobotBoyIdleSprite_19
-    21300100: RobotBoyIdleSprite_20
-    21300102: RobotBoyIdleSprite_21
-    21300104: RobotBoyIdleSprite_22
-    21300106: RobotBoyIdleSprite_23
-    21300108: RobotBoyIdleSprite_24
-    21300110: RobotBoyIdleSprite_25
-    21300112: RobotBoyIdleSprite_26
-    21300114: RobotBoyIdleSprite_27
-    21300116: RobotBoyIdleSprite_28
-    21300118: RobotBoyIdleSprite_29
-    21300120: RobotBoyIdleSprite_30
-    21300122: RobotBoyIdleSprite_31
-    21300124: RobotBoyIdleSprite_32
-    21300126: RobotBoyIdleSprite_33
-    21300128: RobotBoyIdleSprite_34
-    21300130: RobotBoyIdleSprite_35
-    21300132: RobotBoyIdleSprite_36
-    21300134: RobotBoyIdleSprite_37
-    21300136: RobotBoyIdleSprite_38
-    21300138: RobotBoyIdleSprite_39
-    21300140: RobotBoyIdleSprite_40
-    21300142: RobotBoyIdleSprite_41
-    21300144: RobotBoyIdleSprite_42
-    21300146: RobotBoyIdleSprite_43
-    21300148: RobotBoyIdleSprite_44
-    21300150: RobotBoyIdleSprite_45
-    21300152: RobotBoyIdleSprite_46
-    21300154: RobotBoyIdleSprite_47
-    21300156: RobotBoyIdleSprite_48
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: RobotBoyIdle00
+  - first:
+      213: 21300002
+    second: RobotBoyIdle01
+  - first:
+      213: 21300004
+    second: RobotBoyIdle02
+  - first:
+      213: 21300006
+    second: RobotBoyIdle03
+  - first:
+      213: 21300008
+    second: RobotBoyIdle04
+  - first:
+      213: 21300010
+    second: RobotBoyIdle05
+  - first:
+      213: 21300012
+    second: RobotBoyIdle06
+  - first:
+      213: 21300014
+    second: RobotBoyIdle07
+  - first:
+      213: 21300016
+    second: RobotBoyIdle08
+  - first:
+      213: 21300018
+    second: RobotBoyIdle09
+  - first:
+      213: 21300020
+    second: RobotBoyIdle10
+  - first:
+      213: 21300022
+    second: RobotBoyIdle11
+  - first:
+      213: 21300024
+    second: RobotBoyIdle12
+  - first:
+      213: 21300026
+    second: RobotBoyIdle13
+  - first:
+      213: 21300028
+    second: RobotBoyIdle14
+  - first:
+      213: 21300030
+    second: RobotBoyIdle15
+  - first:
+      213: 21300032
+    second: RobotBoyIdle16
+  - first:
+      213: 21300034
+    second: RobotBoyIdle17
+  - first:
+      213: 21300036
+    second: RobotBoyIdle18
+  - first:
+      213: 21300038
+    second: RobotBoyIdle19
+  - first:
+      213: 21300040
+    second: RobotBoyIdle20
+  - first:
+      213: 21300042
+    second: RobotBoyIdle21
+  - first:
+      213: 21300044
+    second: RobotBoyIdle22
+  - first:
+      213: 21300046
+    second: RobotBoyIdle23
+  - first:
+      213: 21300048
+    second: RobotBoyIdle24
+  - first:
+      213: 21300050
+    second: RobotBoyIdle25
+  - first:
+      213: 21300052
+    second: RobotBoyIdle26
+  - first:
+      213: 21300054
+    second: RobotBoyIdle27
+  - first:
+      213: 21300056
+    second: RobotBoyIdle28
+  - first:
+      213: 21300058
+    second: RobotBoyIdle29
+  - first:
+      213: 21300060
+    second: RobotBoyIdleSprite_0
+  - first:
+      213: 21300062
+    second: RobotBoyIdleSprite_1
+  - first:
+      213: 21300064
+    second: RobotBoyIdleSprite_2
+  - first:
+      213: 21300066
+    second: RobotBoyIdleSprite_3
+  - first:
+      213: 21300068
+    second: RobotBoyIdleSprite_4
+  - first:
+      213: 21300070
+    second: RobotBoyIdleSprite_5
+  - first:
+      213: 21300072
+    second: RobotBoyIdleSprite_6
+  - first:
+      213: 21300074
+    second: RobotBoyIdleSprite_7
+  - first:
+      213: 21300076
+    second: RobotBoyIdleSprite_8
+  - first:
+      213: 21300078
+    second: RobotBoyIdleSprite_9
+  - first:
+      213: 21300080
+    second: RobotBoyIdleSprite_10
+  - first:
+      213: 21300082
+    second: RobotBoyIdleSprite_11
+  - first:
+      213: 21300084
+    second: RobotBoyIdleSprite_12
+  - first:
+      213: 21300086
+    second: RobotBoyIdleSprite_13
+  - first:
+      213: 21300088
+    second: RobotBoyIdleSprite_14
+  - first:
+      213: 21300090
+    second: RobotBoyIdleSprite_15
+  - first:
+      213: 21300092
+    second: RobotBoyIdleSprite_16
+  - first:
+      213: 21300094
+    second: RobotBoyIdleSprite_17
+  - first:
+      213: 21300096
+    second: RobotBoyIdleSprite_18
+  - first:
+      213: 21300098
+    second: RobotBoyIdleSprite_19
+  - first:
+      213: 21300100
+    second: RobotBoyIdleSprite_20
+  - first:
+      213: 21300102
+    second: RobotBoyIdleSprite_21
+  - first:
+      213: 21300104
+    second: RobotBoyIdleSprite_22
+  - first:
+      213: 21300106
+    second: RobotBoyIdleSprite_23
+  - first:
+      213: 21300108
+    second: RobotBoyIdleSprite_24
+  - first:
+      213: 21300110
+    second: RobotBoyIdleSprite_25
+  - first:
+      213: 21300112
+    second: RobotBoyIdleSprite_26
+  - first:
+      213: 21300114
+    second: RobotBoyIdleSprite_27
+  - first:
+      213: 21300116
+    second: RobotBoyIdleSprite_28
+  - first:
+      213: 21300118
+    second: RobotBoyIdleSprite_29
+  - first:
+      213: 21300120
+    second: RobotBoyIdleSprite_30
+  - first:
+      213: 21300122
+    second: RobotBoyIdleSprite_31
+  - first:
+      213: 21300124
+    second: RobotBoyIdleSprite_32
+  - first:
+      213: 21300126
+    second: RobotBoyIdleSprite_33
+  - first:
+      213: 21300128
+    second: RobotBoyIdleSprite_34
+  - first:
+      213: 21300130
+    second: RobotBoyIdleSprite_35
+  - first:
+      213: 21300132
+    second: RobotBoyIdleSprite_36
+  - first:
+      213: 21300134
+    second: RobotBoyIdleSprite_37
+  - first:
+      213: 21300136
+    second: RobotBoyIdleSprite_38
+  - first:
+      213: 21300138
+    second: RobotBoyIdleSprite_39
+  - first:
+      213: 21300140
+    second: RobotBoyIdleSprite_40
+  - first:
+      213: 21300142
+    second: RobotBoyIdleSprite_41
+  - first:
+      213: 21300144
+    second: RobotBoyIdleSprite_42
+  - first:
+      213: 21300146
+    second: RobotBoyIdleSprite_43
+  - first:
+      213: 21300148
+    second: RobotBoyIdleSprite_44
+  - first:
+      213: 21300150
+    second: RobotBoyIdleSprite_45
+  - first:
+      213: 21300152
+    second: RobotBoyIdleSprite_46
+  - first:
+      213: 21300154
+    second: RobotBoyIdleSprite_47
+  - first:
+      213: 21300156
+    second: RobotBoyIdleSprite_48
+  externalObjects: {}
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -91,6 +248,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -99,6 +258,10 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -106,10 +269,13 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    serializedVersion: 2
+    filterMode: 1
     aniso: 1
-    mipBias: -1
-    wrapMode: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -118,65 +284,120 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: iPhone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: 2
     textureCompression: 1
     compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
-  - buildTarget: BlackBerry
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: BlackBerry
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
-  - buildTarget: WP8
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WP8
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -192,7 +413,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_1
       rect:
@@ -205,7 +434,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_2
       rect:
@@ -218,7 +455,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_3
       rect:
@@ -231,7 +476,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_4
       rect:
@@ -244,7 +497,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_5
       rect:
@@ -257,7 +518,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_6
       rect:
@@ -270,7 +539,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_7
       rect:
@@ -283,7 +560,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_8
       rect:
@@ -296,7 +581,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_9
       rect:
@@ -309,7 +602,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_10
       rect:
@@ -322,7 +623,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_11
       rect:
@@ -335,7 +644,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_12
       rect:
@@ -348,7 +665,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_13
       rect:
@@ -361,7 +686,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_14
       rect:
@@ -374,7 +707,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_15
       rect:
@@ -387,7 +728,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_16
       rect:
@@ -400,7 +749,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_17
       rect:
@@ -413,7 +770,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_18
       rect:
@@ -426,7 +791,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_19
       rect:
@@ -439,7 +812,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_20
       rect:
@@ -452,7 +833,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_21
       rect:
@@ -465,7 +854,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_22
       rect:
@@ -478,7 +875,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_23
       rect:
@@ -491,7 +896,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_24
       rect:
@@ -504,7 +917,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_25
       rect:
@@ -517,7 +938,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_26
       rect:
@@ -530,7 +959,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_27
       rect:
@@ -543,7 +980,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_28
       rect:
@@ -556,7 +1001,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RobotBoyIdleSprite_29
       rect:
@@ -569,9 +1022,59 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RobotBoyIdleSprite_28: 21300116
+      RobotBoyIdleSprite_17: 21300094
+      RobotBoyIdleSprite_1: 21300062
+      RobotBoyIdleSprite_10: 21300080
+      RobotBoyIdleSprite_22: 21300104
+      RobotBoyIdleSprite_3: 21300066
+      RobotBoyIdleSprite_15: 21300090
+      RobotBoyIdleSprite_23: 21300106
+      RobotBoyIdleSprite_7: 21300074
+      RobotBoyIdleSprite_8: 21300076
+      RobotBoyIdleSprite_4: 21300068
+      RobotBoyIdleSprite_2: 21300064
+      RobotBoyIdleSprite_6: 21300072
+      RobotBoyIdleSprite_16: 21300092
+      RobotBoyIdleSprite_9: 21300078
+      RobotBoyIdleSprite_20: 21300100
+      RobotBoyIdleSprite_19: 21300098
+      RobotBoyIdleSprite_25: 21300110
+      RobotBoyIdleSprite_29: 21300118
+      RobotBoyIdleSprite_27: 21300114
+      RobotBoyIdleSprite_11: 21300082
+      RobotBoyIdleSprite_0: 21300060
+      RobotBoyIdleSprite_13: 21300086
+      RobotBoyIdleSprite_21: 21300102
+      RobotBoyIdleSprite_14: 21300088
+      RobotBoyIdleSprite_24: 21300108
+      RobotBoyIdleSprite_18: 21300096
+      RobotBoyIdleSprite_12: 21300084
+      RobotBoyIdleSprite_5: 21300070
+      RobotBoyIdleSprite_26: 21300112
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

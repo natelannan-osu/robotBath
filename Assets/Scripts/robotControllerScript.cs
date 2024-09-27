@@ -19,7 +19,7 @@ public class robotControllerScript : MonoBehaviour {
 	public Transform groundCheck;
 	private float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 700f;
+	public float jumpForce= 700f;
 	private bool onSoap = false;
 	public Transform soapCheck;
 	public LayerMask whatIsSoap;
